@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/6851/6851302.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&family=Silkscreen:wght@400;700&family=Wallpoet&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&family=Chewy&family=Faster+One&family=Foldit:wght@100..900&family=Honk&family=Luckiest+Guy&family=Major+Mono+Display&family=Metal+Mania&family=Nabla&family=New+Rocker&family=Protest+Guerrilla&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="RSP.css" />
+</head>
+
+<body id="body" class="bg-image">
+    <h1>Rock Paper Scissors</h1>
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="./images/rock.png" title="rock" />
+        </div>
+        <div class="choice" id="paper">
+            <img src="./images/paper.png" title="paper" />
+        </div>
+        <div class="choice" id="scissors">
+            <img src="./images/scissors.png" title="scissors" />
+        </div>
+    </div>
+
+    <div class="score-board">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="ratio-score">:</p>
+        </div>
+        <div class="score">
+            <p id="comp-score">0</p>
+            <p>Computer</p>
+        </div>
+    </div>
+
+    <div class="msg-container">
+        <p id="msg">Play your move</p>
+    </div>
+
+    <!-- Game Rules -->
+    <div class="rules">
+        <p class="rps_rules">Rules</p>
+        <div class="rules_div">
+            <div class="popup_close">
+                <h4>Game Rules</h4>
+                <button class="p_close" type="button" title="buttons"><i
+                        class="fa-sharp fa-solid fa-xmark"></i></button>
+            </div>
+            <img class="rules_img" src="./Images/Game_Rules.png" alt="Rules">
+        </div>
+    </div>
+    <script src="RSP.js"></script>
+
+    <!-- Animated Background -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- jQuery Ripples JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".bg-image").ripples({
+                resolution: 250,
+                perturbance: .005,
+            });
+        });
+    </script>
+</body>
+
+</html>
